@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="Página oficial de alianzas de THE GOLDEN STINGERS (TGS), clan de Roblox.">
+  <title>THE GOLDEN STINGERS | Alianzas oficiales</title>
+  <style>
+    :root{--gold:#f4bd43;--gold2:#ffe5a0;--black:#080808;--panel:#141414;--muted:#bdb7a9;--line:rgba(244,189,67,.27)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--black);color:#f7f3e9;font-family:Arial,Helvetica,sans-serif;line-height:1.65}
+    a{color:inherit}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(8,8,8,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{max-width:1120px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{font-weight:900;letter-spacing:2px;color:var(--gold);text-decoration:none}
+    .navlinks{display:flex;gap:20px;flex-wrap:wrap}
+    .navlinks a{text-decoration:none;color:#e8e1d1;font-size:.92rem}
+    .navlinks a:hover{color:var(--gold)}
+    .hero{min-height:79vh;display:grid;place-items:center;text-align:center;padding:90px 22px 75px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,rgba(175,93,10,.22),transparent 55%),linear-gradient(135deg,#090909,#17100a 55%,#080808)}
+    .hero:before,.hero:after{content:"";position:absolute;width:340px;height:340px;border:1px solid rgba(244,189,67,.15);transform:rotate(45deg);pointer-events:none}
+    .hero:before{left:-210px;top:12%}.hero:after{right:-210px;bottom:5%}
+    .hero-inner{max-width:900px;position:relative;z-index:1}
+    .eyebrow{color:var(--gold);font-size:.8rem;letter-spacing:5px;font-weight:bold;text-transform:uppercase}
+    .bee{font-size:clamp(3rem,8vw,5.5rem);filter:drop-shadow(0 0 22px rgba(244,189,67,.22));margin:8px 0}
+    h1{font-size:clamp(2.7rem,8vw,6.3rem);line-height:.98;letter-spacing:clamp(1px,1vw,7px);margin:10px 0 24px;font-weight:950;text-transform:uppercase}
+    h1 span{display:block;color:var(--gold);text-shadow:0 0 28px rgba(244,189,67,.16)}
+    .hero p{max-width:680px;margin:0 auto 30px;color:#d2cabb;font-size:1.08rem}
+    .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:13px 21px;border-radius:6px;border:1px solid var(--gold);background:var(--gold);color:#171007;font-weight:800;text-decoration:none;transition:transform .2s,background .2s;cursor:pointer}
+    .btn:hover{transform:translateY(-3px);background:var(--gold2)}
+    .btn.secondary{background:transparent;color:var(--gold)}
+    .btn.secondary:hover{background:rgba(244,189,67,.1)}
+    .section{max-width:1040px;margin:auto;padding:76px 22px}
+    .section-head{text-align:center;max-width:720px;margin:0 auto 36px}
+    .kicker{color:var(--gold);font-size:.76rem;letter-spacing:3px;text-transform:uppercase;font-weight:bold}
+    h2{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.15;margin:10px 0 14px}
+    .section-head p,.muted{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:linear-gradient(145deg,#171717,#101010);border:1px solid var(--line);border-radius:12px;padding:24px}
+    .card .icon{font-size:1.7rem}
+    .card h3{color:var(--gold2);margin:10px 0 7px}
+    .card p{margin:0;color:#c8c1b4;font-size:.96rem}
+    .band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:linear-gradient(90deg,rgba(244,189,67,.06),transparent,rgba(244,189,67,.06))}
+    .requirements{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .requirement{display:flex;gap:13px;padding:18px;border:1px solid var(--line);border-radius:9px;background:#111}
+    .check{color:var(--gold);font-size:1.2rem;font-weight:bold}
+    .requirement strong{display:block;margin-bottom:3px}
+    .requirement span:last-child{color:#c8c1b4;font-size:.94rem}
+    .accordion{border:1px solid var(--line);border-radius:9px;overflow:hidden;background:#101010;margin:12px 0}
+    .accordion summary{cursor:pointer;list-style:none;padding:18px 20px;font-weight:bold;color:var(--gold2);display:flex;justify-content:space-between;gap:12px}
+    .accordion summary::-webkit-details-marker{display:none}
+    .accordion summary:after{content:"＋";color:var(--gold);font-size:1.2rem}
+    .accordion[open] summary:after{content:"−"}
+    .accordion .content{padding:0 20px 20px;color:#c9c2b6}
+    .accordion ul{padding-left:21px}
+    .contact-box{max-width:760px;margin:auto;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,#17130c,#101010);padding:clamp(22px,5vw,40px)}
+    form{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+    label{display:block;font-size:.9rem;color:#e5dccb;margin-bottom:6px}
+    input,textarea,select{width:100%;padding:12px 13px;background:#090909;color:#fff;border:1px solid #49402d;border-radius:6px;font:inherit}
+    input:focus,textarea:focus,select:focus{outline:2px solid var(--gold);outline-offset:1px}
+    .full{grid-column:1/-1}
+    textarea{min-height:120px;resize:vertical}
+    .note{font-size:.84rem;color:#aaa18f;margin:12px 0 0}
+    .form-status{color:var(--gold2);margin-top:12px;min-height:1.4em}
+    footer{border-top:1px solid var(--line);padding:28px 22px;text-align:center;color:#9e9688;font-size:.9rem}
+    footer strong{color:var(--gold)}
+    .backtop{display:inline-block;margin-top:10px;color:var(--gold);text-decoration:none}
+    @media(max-width:760px){.nav{align-items:flex-start;flex-direction:column}.navlinks{gap:12px}.hero{min-height:70vh}.grid{grid-template-columns:1fr}.requirements{grid-template-columns:1fr}.section{padding:58px 18px}form{grid-template-columns:1fr}.full{grid-column:auto}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="nav" aria-label="Navegación principal">
+    <a class="brand" href="#inicio">TGS ◈</a>
+    <div class="navlinks">
+      <a href="#identidad">Identidad</a><a href="#alianzas">Alianzas</a><a href="#reglas">Reglamento</a><a href="#contacto">Contacto</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="hero-inner">
+      <div class="eyebrow">Página oficial de alianzas · Roblox</div>
+      <div class="bee" aria-hidden="true">🐝 🔥</div>
+      <h1>THE GOLDEN <span>STINGERS</span></h1>
+      <p>Lealtad en cada movimiento. Respeto en cada alianza. Una sola colmena, una fuerza imparable.</p>
+      <div class="actions">
+        <a class="btn" href="#alianzas">Solicitar alianza ↗</a>
+        <a class="btn secondary" href="#reglas">Leer el reglamento</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="identidad">
+    <div class="section-head">
+      <div class="kicker">Nuestra identidad</div>
+      <h2>Una colmena. Un propósito.</h2>
+      <p>THE GOLDEN STINGERS (TGS) busca construir alianzas sólidas con clanes que valoren el respeto, la comunicación y el juego limpio.</p>
+    </div>
+    <div class="grid">
+      <article class="card"><div class="icon">🐝</div><h3>Lealtad</h3><p>Cumplimos los acuerdos y tratamos a nuestros aliados con consideración.</p></article>
+      <article class="card"><div class="icon">🔥</div><h3>Competitividad</h3><p>Nos esforzamos por mejorar, organizarnos y competir sin perder el respeto.</p></article>
+      <article class="card"><div class="icon">♛</div><h3>Respeto mutuo</h3><p>Las diferencias se hablan con calma. Ningún clan está por encima de las personas.</p></article>
+    </div>
+  </section>
+
+  <div class="band">
+    <section class="section" id="alianzas">
+      <div class="section-head">
+        <div class="kicker">Unión entre clanes</div>
+        <h2>Requisitos para una alianza</h2>
+        <p>Antes de enviar una solicitud, revisa que tu clan pueda comprometerse con estos puntos.</p>
+      </div>
+      <div class="requirements">
+        <div class="requirement"><span class="check">✦</span><div><strong>Respeto y madurez</strong><span>Sus integrantes y líderes deben mantener un trato respetuoso con TGS y los demás clanes.</span></div></div>
+        <div class="requirement"><span class="check">✦</span><div><strong>Liderazgo claro</strong><span>Debe existir al menos una persona líder o representante autorizada para hablar en nombre del clan.</span></div></div>
+        <div class="requirement"><span class="check">✦</span><div><strong>Comunicación</strong><span>El clan debe contar con un medio de contacto acordado para coordinar actividades y avisos.</span></div></div>
+        <div class="requirement"><span class="check">✦</span><div><strong>Actividad razonable</strong><span>Se espera participación en actividades acordadas o aviso cuando no puedan asistir.</span></div></div>
+        <div class="requirement"><span class="check">✦</span><div><strong>Juego limpio</strong><span>No se aceptan alianzas que promuevan acoso, trampas, amenazas o ataques coordinados.</span></div></div>
+        <div class="requirement"><span class="check">✦</span><div><strong>Acuerdos mutuos</strong><span>Ambos clanes deben conocer las reglas y aceptar las responsabilidades de la alianza.</span></div></div>
+      </div>
+    </section>
+  </div>
+
+  <section class="section" id="reglas">
+    <div class="section-head">
+      <div class="kicker">Normas oficiales</div>
+      <h2>Términos y condiciones</h2>
+      <p>Abre cada apartado para leer las reglas que ayudan a mantener una comunidad segura y organizada.</p>
+    </div>
+    <details class="accordion"><summary>1. Respeto y convivencia</summary><div class="content"><ul><li>Tratar con respeto a miembros, líderes, aliados y rivales.</li><li>No se permiten insultos discriminatorios, acoso, amenazas ni humillaciones.</li><li>Las bromas dejan de ser aceptables cuando alguien pide que paren.</li></ul></div></details>
+    <details class="accordion"><summary>2. Comunicación y organización</summary><div class="content"><ul><li>Usar los canales acordados para anuncios y coordinación.</li><li>Evitar spam, rumores y mensajes que provoquen conflictos.</li><li>Los representantes deben comunicar cambios importantes con claridad y respeto.</li></ul></div></details>
+    <details class="accordion"><summary>3. Actividad y compromiso</summary><div class="content"><ul><li>Participar cuando sea posible en eventos o actividades previamente acordados.</li><li>Si un clan no puede participar, debe avisar cuando le sea posible.</li><li>La actividad se evaluará de forma razonable; no se exige estar conectado todo el tiempo.</li></ul></div></details>
+    <details class="accordion"><summary>4. Privacidad y seguridad</summary><div class="content"><ul><li>No compartir contraseñas, datos personales, conversaciones privadas ni información de otros sin permiso.</li><li>No se debe presionar a nadie para revelar información personal.</li><li>Reportar cuentas sospechosas, amenazas o situaciones inseguras a una persona moderadora de confianza.</li></ul></div></details>
+    <details class="accordion"><summary>5. Resolución de conflictos</summary><div class="content"><ul><li>Primero, hablar con calma entre los representantes implicados.</li><li>Si no se resuelve, pedir la mediación de líderes de ambos clanes.</li><li>No organizar ataques, hostigamiento ni discusiones públicas para tomar represalias.</li><li>Si hay faltas graves o repetidas, TGS puede pausar o terminar la alianza después de revisar la situación.</li></ul></div></details>
+    <details class="accordion"><summary>6. Alianzas, cambios y finalización</summary><div class="content"><ul><li>Una solicitud no garantiza que la alianza sea aceptada; TGS revisará la información antes de responder.</li><li>Las alianzas deben mantenerse de buena fe y respetar los acuerdos que ambos clanes acepten.</li><li>Cualquier clan puede solicitar terminar una alianza comunicándolo de forma respetuosa.</li><li>Estas normas pueden actualizarse. Los cambios importantes se comunicarán a los clanes aliados.</li></ul></div></details>
+  </section>
+
+  <div class="band">
+    <section class="section" id="contacto">
+      <div class="section-head">
+        <div class="kicker">Contacto oficial</div>
+        <h2>¿Quieres formar una alianza con TGS?</h2>
+        <p>Completa los datos de tu clan. El botón preparará un mensaje para que puedas enviarlo desde tu correo.</p>
+      </div>
+      <div class="contact-box">
+        <form id="allianceForm">
+          <div><label for="clan">Nombre del clan *</label><input id="clan" name="clan" required maxlength="70" placeholder="Nombre de tu clan"></div>
+          <div><label for="leader">Nombre del líder o representante *</label><input id="leader" name="leader" required maxlength="70" placeholder="Tu nombre o usuario"></div>
+          <div><label for="platform">Plataforma de contacto *</label><select id="platform" name="platform" required><option value="">Selecciona una opción</option><option>Discord</option><option>Roblox</option><option>Correo electrónico</option><option>Otra</option></select></div>
+          <div><label for="contact">Usuario o medio de contacto *</label><input id="contact" name="contact" required maxlength="100" placeholder="Usuario / contacto"></div>
+          <div class="full"><label for="members">Cantidad aproximada de integrantes</label><input id="members" name="members" type="number" min="1" max="100000" placeholder="Ej. 25"></div>
+          <div class="full"><label for="message">¿Por qué quieren formar una alianza? *</label><textarea id="message" name="message" required maxlength="1000" placeholder="Cuéntanos brevemente sobre tu clan y qué tipo de alianza proponen."></textarea></div>
+          <div class="full"><button class="btn" type="submit">Preparar solicitud ✉</button><p class="note">Importante: antes de publicar, cambia el correo de ejemplo en el código por el correo oficial que quieras usar. El formulario no envía datos automáticamente ni los guarda en esta página.</p><div class="form-status" id="status" role="status"></div></div>
+        </form>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div><strong>THE GOLDEN STINGERS · TGS</strong></div>
+  <div>Respeto • Lealtad • Competitividad</div>
+  <div>Comunidad de Roblox creada por jugadores. Esta página no está afiliada oficialmente a Roblox Corporation.</div>
+  <a class="backtop" href="#inicio">Volver arriba ↑</a>
+</footer>
+<script>
+  // CAMBIA este correo por el correo oficial que recibirá las solicitudes de alianza.
+  const TGS_CONTACT_EMAIL = "CAMBIA-ESTE-CORREO@example.com";
+  document.getElementById("allianceForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const form = new FormData(event.target);
+    if (TGS_CONTACT_EMAIL.includes("CAMBIA-ESTE-CORREO")) {
+      document.getElementById("status").textContent = "La página está lista, pero falta configurar el correo oficial en el código antes de enviar solicitudes.";
+      return;
+    }
+    const subject = "Solicitud de alianza TGS — " + form.get("clan");
+    const body = [
+      "Solicitud de alianza con THE GOLDEN STINGERS (TGS)",
+      "",
+      "Clan: " + form.get("clan"),
+      "Líder/representante: " + form.get("leader"),
+      "Plataforma: " + form.get("platform"),
+      "Contacto: " + form.get("contact"),
+      "Integrantes aproximados: " + (form.get("members") || "No indicado"),
+      "",
+      "Propuesta:",
+      form.get("message")
+    ].join("\\n");
+    window.location.href = "mailto:" + encodeURIComponent(TGS_CONTACT_EMAIL) + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    document.getElementById("status").textContent = "Se abrirá tu aplicación de correo para que revises y envíes la solicitud.";
+  });
+</script>
+</body>
+</html>
